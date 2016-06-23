@@ -489,3 +489,28 @@ public class CollectionSpeed {
 
     }
 }
+
+
+/*
+
+Check speed in microsec, for 10000
+          	add			get			remove		contains	populate	iterator.add	iterator.remove
+ArrayList 	270			140			190		    290		    260		    430		        140
+LinkedList 	460			22580		190 		210	    	250		    390		        30
+HashSet 	310						320	    	360	    	260
+TreeSet 	270						340		    560	    	250
+Check speed in microsec, for 100000
+          	add			get			remove		contains	populate	iterator.add	iterator.remove
+ArrayList 	1080		0			260	    	110	    	570		    1370		    11490
+LinkedList 	1630		215880		530	    	10	    	1600		1510		    30
+HashSet 	840						1590		140	    	960
+TreeSet 	610						210	    	4210		960
+Check speed in microsec, for 1000000
+          	add			get			remove		contains	populate	iterator.add	iterator.remove
+ArrayList 	9690		10			4870		880		    5050		10960		    1681150
+LinkedList 	11790		2151180		6120		0		    10600		13300		    100
+HashSet 	6740					8260		970		    5140
+TreeSet 	5120					1920		94470		4770
+
+Process finished with exit code 0
+ */
