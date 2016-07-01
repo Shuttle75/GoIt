@@ -25,30 +25,38 @@ public class SemaphoreTest {
 
             Thread.sleep(100);
             System.out.println("Permits " + semaphore.getAvailablePermits());
-            semaphore.release(7);
+            semaphore.release(9);
 
             Thread.sleep(100);
-            System.out.println("Permits " + semaphore.getAvailablePermits());
 
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-            /*
         new Thread(new Runnable() {
             @Override
             public void run() {
+                System.out.println("Permits " + semaphore.getAvailablePermits());
+                System.out.println("Before WAIT " + Thread.currentThread().getName());
                 try {
-                    System.out.println("Permits " + semaphore.getAvailablePermits());
-                    System.out.println("Before WAIT " + Thread.currentThread().getName());
-                    semaphore.acquire(3);
-                    System.out.println("After WAIT " + Thread.currentThread().getName());
+                    semaphore.acquire(2);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                System.out.println("After WAIT " + Thread.currentThread().getName());
             }
         }).start();
-        */
+
+
+        try{
+            Thread.sleep(100);
+            System.out.println("Permits " + semaphore.getAvailablePermits());
+            semaphore.release(9);
+            Thread.sleep(100);
+            System.out.println("Permits " + semaphore.getAvailablePermits());
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 
     public class Worker implements Runnable {

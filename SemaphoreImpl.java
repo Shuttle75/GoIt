@@ -10,9 +10,11 @@ public class SemaphoreImpl implements Semaphore{
     @Override
     public void acquire() throws InterruptedException{
         synchronized (lock) {
-            this.permits--;
             if (this.permits < 0) {
+                this.permits--;
                 lock.wait();
+            } else {
+                this.permits--;
             }
         }
     }
@@ -20,9 +22,11 @@ public class SemaphoreImpl implements Semaphore{
     @Override
     public void acquire(int permits) throws InterruptedException{
         synchronized (lock) {
-            this.permits -= permits;
             if (this.permits - permits < 0) {
+                this.permits = 0;
                 lock.wait();
+            } else {
+                this.permits -= permits;
             }
         }
     }
@@ -44,6 +48,8 @@ public class SemaphoreImpl implements Semaphore{
                 for (int i = this.permits; i < (this.permits + permits); i++) {
                     lock.notify();
                 }
+                this.permits += permits;
+            } else {
                 this.permits += permits;
             }
         }
