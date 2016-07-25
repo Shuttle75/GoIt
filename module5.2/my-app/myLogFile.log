@@ -1,0 +1,8 @@
+2016-07-26 01:41:57,383  INFO   [ClassPathXmlApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5fcfe4b2: startup date [Tue Jul 26 01:41:57 EEST 2016]; root of context hierarchy 
+2016-07-26 01:41:57,463  INFO   [XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [application-context.xml] 
+2016-07-26 01:41:57,772  INFO   [Bootstrap] Logger: Before operation 
+2016-07-26 01:41:57,795  INFO   [Bootstrap] Logger:  After operation 
+2016-07-26 01:41:57,795  INFO   [Bootstrap] Logger: Before operation 
+2016-07-26 01:41:57,796  INFO   [Bootstrap] Logger:  After operation 
+2016-07-26 01:41:57,796  INFO   [Bootstrap] Logger: Before operation 
+2016-07-26 01:41:57,796  INFO   [Bootstrap] Logger:  After operation 
