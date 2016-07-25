@@ -23,7 +23,7 @@ public class CalculatorTest {
         bootstrap.execute();
 
         System.out.println("5 * 5");
-        in = new ByteArrayInputStream("5 - 5".getBytes());
+        in = new ByteArrayInputStream("5 * 5".getBytes());
         System.setIn(in);
         bootstrap.execute();
     }
